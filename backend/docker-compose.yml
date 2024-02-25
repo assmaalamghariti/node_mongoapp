@@ -1,0 +1,25 @@
+version: "3" 
+services:
+  node-app:
+    container_name: node-app
+    image: node-app:latest
+    restart: always
+    build: .
+    ports:
+      - "7500:7500"
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - ./data/configdb:/data/db
+    networks:
+      - my-network
+      
+    container_name: backend-mongo-1
+
+networks:
+  my-network:

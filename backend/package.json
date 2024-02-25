@@ -1,0 +1,24 @@
+{
+  "name": "node_mongoapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "description": "application",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon -L app.js"
+  },
+  "author": "ASMA",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "livereload": "^0.9.3",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.2"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
